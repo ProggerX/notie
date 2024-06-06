@@ -8,6 +8,7 @@ import (
 	"github.com/charmbracelet/glamour"
 	"github.com/charmbracelet/ssh"
 	"github.com/charmbracelet/wish"
+	"github.com/charmbracelet/wish/logging"
 )
 
 func isFileExist(path string) bool {
@@ -35,6 +36,7 @@ func StartViewer(host string, port string) {
 					}
 				}
 			},
+			logging.Middleware(),
 		),
 	)
 

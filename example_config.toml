@@ -1,2 +1,2 @@
-editor_port = 3000
-viewer_port = 3001
+editor_port = 9990
+viewer_port = 9991

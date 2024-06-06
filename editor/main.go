@@ -11,6 +11,7 @@ import (
 	"github.com/charmbracelet/wish"
 	"github.com/charmbracelet/wish/activeterm"
 	"github.com/charmbracelet/wish/bubbletea"
+	"github.com/charmbracelet/wish/logging"
 )
 
 func isFileExist(path string) bool {
@@ -34,6 +35,7 @@ func StartEditor(host string, port string) {
 			},
 			bubbletea.Middleware(teaHandler),
 			activeterm.Middleware(),
+			logging.Middleware(),
 		),
 	)
 
