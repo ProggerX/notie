@@ -10,4 +10,4 @@ I recommend using aliases:
 - ```alias nget="ssh -p3001 bald.su"```
 
 ## Selfhosting:
-Read [[doc/SELFHOSTING.md]]
+Read [doc/SELFHOSTING.md]
