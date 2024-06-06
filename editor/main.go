@@ -48,6 +48,8 @@ func teaHandler(s ssh.Session) (tea.Model, []tea.ProgramOption) {
 
 	ta := textarea.New()
 	ta.Blur()
+	ta.SetWidth(pty.Window.Width - 6)
+	ta.SetHeight(pty.Window.Height - 6)
 
 	m := model{
 		Term:      pty.Term,

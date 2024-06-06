@@ -53,7 +53,7 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 
 func (m model) View() string {
 	return fmt.Sprintf(
-		"Enter name of note here:\n\n%s\n\nAnd a note here:\n\n%s\n\nWhen you're done, press ctrl+c\nOr, if you don't want to write or save anything, press ctrl+x\n\n",
+		"Enter name of note here:\n%s\nAnd your note here:\n%s\nWhen you're done, press ctrl+c\nOr ctrl+x for force quit\n",
 		m.NameInput.View(),
 		m.TextArea.View(),
 	)
