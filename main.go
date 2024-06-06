@@ -14,8 +14,9 @@ import (
 )
 
 type Config struct {
-	EditorPort int `toml:"editor_port"`
-	ViewerPort int `toml:"viewer_port"`
+	Host       string `toml:"host"`
+	EditorPort int    `toml:"editor_port"`
+	ViewerPort int    `toml:"viewer_port"`
 }
 
 func isFileExist(path string) bool {
@@ -41,11 +42,11 @@ func main() {
 	var wg sync.WaitGroup
 	wg.Add(2)
 	go func() {
-		editor.StartEditor("localhost", strconv.Itoa(config.EditorPort))
+		editor.StartEditor(config.Host, strconv.Itoa(config.EditorPort))
 		wg.Done()
 	}()
 	go func() {
-		viewer.StartViewer("localhost", strconv.Itoa(config.ViewerPort))
+		viewer.StartViewer(config.Host, strconv.Itoa(config.ViewerPort))
 		wg.Done()
 	}()
 
