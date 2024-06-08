@@ -50,6 +50,7 @@ func teaHandler(s ssh.Session) (tea.Model, []tea.ProgramOption) {
 
 	ta := textarea.New()
 	ta.Blur()
+	ta.CharLimit = 0
 	ta.SetWidth(pty.Window.Width - 6)
 	ta.SetHeight(pty.Window.Height - 6)
 
