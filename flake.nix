@@ -10,7 +10,7 @@
 		packages."${system}".default = pkgs.buildGoModule {
 			name = "notie";
 			src = ./.;
-			vendorHash = "";
+			vendorHash = "sha256-LenvS8e7DQounGNNkn33z10m8NQBfpB9NpgJ/WFaoUo=";
 		};
 		nixosModules.notie = { config, lib, ... }: {
 			# Just don't look here, it's for my server.
