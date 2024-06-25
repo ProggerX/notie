@@ -28,12 +28,14 @@
 				services.frp.settings.proxies = [
 					{
 						name = "notie editor";
+						type = "tcp";
 						localIP = "127.0.0.1";
 						localPort = 9990;
 						remotePort = 9990;
 					}
 					{
 						name = "notie viewer";
+						type = "tcp";
 						localIP = "127.0.0.1";
 						localPort = 9991;
 						remotePort = 9991;
