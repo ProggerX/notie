@@ -29,8 +29,7 @@ func StartViewer(host string, port string) {
 				return func(s ssh.Session) {
 					if len(s.Command()) != 1 {
 						wish.Println(s, "I expected only one argument - name of note")
-					}
-					if isFileExist(s.Command()[0]) && !strings.Contains(s.Command()[0], "/") {
+					} else if isFileExist(s.Command()[0]) && !strings.Contains(s.Command()[0], "/") {
 						bts, _ := os.ReadFile(".notie/notes/" + s.Command()[0])
 						out, _ := glamour.Render(string(bts), "dark")
 						wish.Println(s, out)
