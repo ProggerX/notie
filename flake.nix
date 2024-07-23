@@ -22,6 +22,7 @@
 					wantedBy = [ "multi-user.target" ];
 					serviceConfig = {
 						ExecStart = "${self.packages."${system}".default}/bin/notie";
+						WorkingDirectory = "/var/lib/notie";
 					};
 				};
 
